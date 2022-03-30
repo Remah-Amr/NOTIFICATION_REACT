@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBfTuzIZ19EWIE5BVGseKifa_4iuITXEvk",
-  authDomain: "test-6393f.firebaseapp.com",
-  projectId: "test-6393f",
-  storageBucket: "test-6393f.appspot.com",
-  messagingSenderId: "428344922618",
-  appId: "1:428344922618:web:159fa46538cbbbf6d39443",
-  measurementId: "G-W596FW4R3C"
+  apiKey: "AIzaSyCsf_zMJxfBzMhlKUi_orLQ5Hnb-567VeM",
+  authDomain: "remah-a60ee.firebaseapp.com",
+  projectId: "remah-a60ee",
+  storageBucket: "remah-a60ee.appspot.com",
+  messagingSenderId: "693802205955",
+  appId: "1:693802205955:web:b1f8a89e5dc36f84331f36",
+  measurementId: "G-RLGY9PRJK3"
 };
 
 initializeApp(firebaseConfig);
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
       // (you can find it in the Console too)
       const token = await getToken(messaging, {
         vapidKey:
-          "BK_kmEAr9yzQHm5PsgUneXLZTnJMsV-HmYjQeOrgz6QGKszLWtSeLNo-dUTolW4TqIkGtj0spOXFLRsA9rWnlRw",
+          "BO79Cq0EYWj7IIWRoenWUpcTXjJEfbKa-pXphgm4aXkeKYOi1ehOIeKIIAsOEO_gfovroeKBaC1ESBpPul33Oec",
       });
       console.log("TOKEN :", token);
       setToken(token);
