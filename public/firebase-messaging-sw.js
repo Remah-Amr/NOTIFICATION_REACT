@@ -5,12 +5,13 @@ importScripts("https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js");
 
 // Replace the values with yours
 const firebaseConfig = {
-  apiKey: "AIzaSyBBVuMo2xD6_eLWsHs0mF1V2Ao1gAaxfU0",
-  authDomain: "notification-cli.firebaseapp.com",
-  projectId: "notification-cli",
-  storageBucket: "notification-cli.appspot.com",
-  messagingSenderId: "1087140615269",
-  appId: "1:1087140615269:web:92cfb044ebc4648e81228c",
+  apiKey: "AIzaSyBfTuzIZ19EWIE5BVGseKifa_4iuITXEvk",
+  authDomain: "test-6393f.firebaseapp.com",
+  projectId: "test-6393f",
+  storageBucket: "test-6393f.appspot.com",
+  messagingSenderId: "428344922618",
+  appId: "1:428344922618:web:159fa46538cbbbf6d39443",
+  measurementId: "G-W596FW4R3C"
 };
 
 firebase.initializeApp(firebaseConfig);

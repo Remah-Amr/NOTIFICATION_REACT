@@ -7,12 +7,13 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBBVuMo2xD6_eLWsHs0mF1V2Ao1gAaxfU0",
-  authDomain: "notification-cli.firebaseapp.com",
-  projectId: "notification-cli",
-  storageBucket: "notification-cli.appspot.com",
-  messagingSenderId: "1087140615269",
-  appId: "1:1087140615269:web:92cfb044ebc4648e81228c",
+  apiKey: "AIzaSyBfTuzIZ19EWIE5BVGseKifa_4iuITXEvk",
+  authDomain: "test-6393f.firebaseapp.com",
+  projectId: "test-6393f",
+  storageBucket: "test-6393f.appspot.com",
+  messagingSenderId: "428344922618",
+  appId: "1:428344922618:web:159fa46538cbbbf6d39443",
+  measurementId: "G-W596FW4R3C"
 };
 
 initializeApp(firebaseConfig);
@@ -27,7 +28,7 @@ const Home: NextPage = () => {
       // (you can find it in the Console too)
       const token = await getToken(messaging, {
         vapidKey:
-          "BLGENi5QrtOMlJjYz5bK5myzcMdI6JtvHsgNZJ7hEEgKNxJxG_7_BpxvLFwpcAH5KE3FprKdLiUjwWZN4QjU6ig",
+          "BK_kmEAr9yzQHm5PsgUneXLZTnJMsV-HmYjQeOrgz6QGKszLWtSeLNo-dUTolW4TqIkGtj0spOXFLRsA9rWnlRw",
       });
       console.log("TOKEN :", token);
       setToken(token);
