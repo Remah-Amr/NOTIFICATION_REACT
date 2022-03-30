@@ -1,9 +1,44 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { initializeApp } from "firebase/app";
+import { getMessaging, getToken } from "firebase/messaging";
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import { useEffect } from "react";
+import styles from "../styles/Home.module.css";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBBVuMo2xD6_eLWsHs0mF1V2Ao1gAaxfU0",
+  authDomain: "notification-cli.firebaseapp.com",
+  projectId: "notification-cli",
+  storageBucket: "notification-cli.appspot.com",
+  messagingSenderId: "1087140615269",
+  appId: "1:1087140615269:web:92cfb044ebc4648e81228c",
+};
+
+initializeApp(firebaseConfig);
+
+
+export async function getFCMToken() {
+  const messaging = getMessaging();
+  try {
+    // Don't forget to paste your VAPID key here
+    // (you can find it in the Console too)
+    const token = await getToken(messaging, {
+      vapidKey:
+      "BLGENi5QrtOMlJjYz5bK5myzcMdI6JtvHsgNZJ7hEEgKNxJxG_7_BpxvLFwpcAH5KE3FprKdLiUjwWZN4QjU6ig",
+    });
+    console.log("TOKEN :", token);
+    return token;
+  } catch (e) {
+    console.log("getFCMToken error", e);
+    return undefined;
+  }
+}
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    getFCMToken();
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -18,7 +53,7 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
@@ -59,14 +94,14 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
