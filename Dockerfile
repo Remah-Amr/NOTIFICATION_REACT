@@ -6,8 +6,6 @@ COPY package*.json ./
 FROM base as builder
 WORKDIR /app
 COPY . .
-RUN npm install -g npm@9
-RUN npm i next
 RUN npm run build
 
 
@@ -15,7 +13,7 @@ FROM base as production
 WORKDIR /app
 
 ENV NODE_ENV=production
-RUN npm install
+RUN npm ci
 
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
