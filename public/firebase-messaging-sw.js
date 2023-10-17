@@ -5,13 +5,14 @@ importScripts("https://www.gstatic.com/firebasejs/8.2.0/firebase-messaging.js");
 
 // Replace the values with yours
 const firebaseConfig = {
-  apiKey: "AIzaSyCsf_zMJxfBzMhlKUi_orLQ5Hnb-567VeM",
-  authDomain: "remah-a60ee.firebaseapp.com",
-  projectId: "remah-a60ee",
-  storageBucket: "remah-a60ee.appspot.com",
-  messagingSenderId: "693802205955",
-  appId: "1:693802205955:web:b1f8a89e5dc36f84331f36",
-  measurementId: "G-RLGY9PRJK3"
+  apiKey: "AIzaSyBq64HWdfk5p47V7yJtHvRP1_mflsrnqlY",
+  authDomain: "authmodule-test.firebaseapp.com",
+  databaseURL: "https://authmodule-test-default-rtdb.firebaseio.com",
+  projectId: "authmodule-test",
+  storageBucket: "authmodule-test.appspot.com",
+  messagingSenderId: "239733814657",
+  appId: "1:239733814657:web:08d8a08350060cbe1ea480",
+  measurementId: "G-WQMCS66HE7"
 };
 
 firebase.initializeApp(firebaseConfig);
