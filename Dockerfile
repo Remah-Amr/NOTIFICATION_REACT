@@ -6,7 +6,7 @@ COPY package*.json ./
 FROM base as builder
 WORKDIR /app
 COPY . .
-RUN npm install -g npm@10.2.0
+RUN npm install -g npm@9
 RUN npm i next
 RUN npm run build
 
